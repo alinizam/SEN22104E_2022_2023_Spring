@@ -21,7 +21,7 @@ import javax.swing.*;
 public class Example4 {
     static int x,y;
     public static void main(String[] args) {
-        JFrame f=new JFrame();ex
+        JFrame f=new JFrame();
         JTextField t=new JTextField("Text");
         JLabel l=new JLabel("Label");
         JButton b=new JButton("Click me");
