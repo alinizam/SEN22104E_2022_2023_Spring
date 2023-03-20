@@ -8,6 +8,13 @@ package Theory4;
  *
  * @author ali.nizam
  */
-public class StockException {
+public class StockException extends RuntimeException{
+    int remainingITem;
+    public StockException() {
+    }
+
+    public StockException(int remainingITem) {
+        this.remainingITem = remainingITem;
+    }
     
 }

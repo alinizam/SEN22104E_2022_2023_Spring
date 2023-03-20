@@ -11,11 +11,13 @@ import java.util.Scanner;
  * @author ali.nizam
  */
 public class Example9 {
+
     public static void main(String[] args) {
-        int amount =5;
-        Scanner s=new Scanner(System.in);
-        int decr=s.nextInt();
-        if (amount-decr<0)
-            throw new StockException();
+        int amount = 5;
+        Scanner s = new Scanner(System.in);
+        int decr = s.nextInt();
+        if (amount - decr < 0) {
+            throw new StockException(amount - decr);
+        }
     }
 }
