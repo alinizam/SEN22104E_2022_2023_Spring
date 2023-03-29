@@ -12,4 +12,11 @@
         <exec.mainClass>com.mycompany.sen22104e.SEN22104E</exec.mainClass>
     </properties>
     <name>SEN22104E_2022_2023_Spring</name>
+    <dependencies>
+        <dependency>
+            <groupId>org.netbeans.external</groupId>
+            <artifactId>AbsoluteLayout</artifactId>
+            <version>RELEASE150</version>
+        </dependency>
+    </dependencies>
 </project>
