@@ -15,22 +15,20 @@ public class Example1 {
 
     public static void main(String[] args) {
         String pattern = "\\b[\\w]*[0-9.]+[\\w]*";
-        String searchText = "Fatih 123.3 Su1ltan Mehmet3.2 foundation .3 University3";
-        //1a
-        //int count=controlPattern(pattern, searchText);
-        //System.out.println("The number ofwords with digit" + count);
-        //1b
-       // pattern="\\b[\\S]&&[^.]";
-        pattern="\\b"; //[[\\w]&&[^.]]";
-       // controlPattern(pattern, searchText);
+        String searchText = "Fatih 123.3 Su1ltan Mehmet3.2 .foundation .3 University3";
+        //question1a
+        int count=controlPattern(pattern, searchText);
+        System.out.println("The number ofwords with digit" + count);
+        //question1b
+        pattern="[A-z0-9.]+"; //[[\\w]&&[^.]]";
+        controlPattern(pattern, searchText);
 
-        //question1b();
+        //question1c();
         pattern = "[0-9]";
-        // System.out.println(findDigitTotat(pattern, searchText));
-        //
-        pattern = "[0-9]+[.][0-9]+";
-        //System.out.println(controlPattern(pattern, searchText));
+        System.out.println(findDigitTotat(pattern, searchText));
 
+        //question1d
+        pattern = "[0-9]+[.][0-9]+";
         convertDoubleFormat(pattern, searchText);
     }
 
