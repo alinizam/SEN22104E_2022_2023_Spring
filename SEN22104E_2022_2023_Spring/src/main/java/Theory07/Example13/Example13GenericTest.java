@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Theory07;
+package Theory07.Example13;
 
 import java.util.ArrayList;
 
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class Example13GenericTest {
     public static void main(String[] args) {
         System.out.println(CalculatorWithoutGeneric.add(10, 5)); 
-      //  int i=CalculatorWithoutGeneric.add(10, 5);
+
         Calculator<Integer> calc=new Calculator<Integer>();
         System.out.println(calc.add(10, 50));
         Calculator<Double> calc1=new Calculator<Double>();
