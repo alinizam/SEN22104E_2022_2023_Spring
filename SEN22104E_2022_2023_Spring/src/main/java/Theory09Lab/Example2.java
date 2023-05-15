@@ -23,6 +23,7 @@ public class Example2 extends javax.swing.JFrame {
      */
     public Example2() {
         initComponents();
+        
     }
 
     /**
