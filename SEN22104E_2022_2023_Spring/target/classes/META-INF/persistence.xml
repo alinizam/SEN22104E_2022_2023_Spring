@@ -3,6 +3,8 @@
   <persistence-unit name="CPII_PE" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>Theory12.Employee</class>
+    <class>Theory12Lab.Doctor</class>
+    <class>Theory12Lab.Patiens</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/sample"/>
       <property name="javax.persistence.jdbc.user" value="app"/>
