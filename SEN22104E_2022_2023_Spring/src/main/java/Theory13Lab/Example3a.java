@@ -20,7 +20,7 @@ import javax.persistence.Query;
  *
  * @author ali.nizam
  */
-public class Example3 {
+public class Example3a {
 
     public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("CPII_PE");
@@ -30,11 +30,11 @@ public class Example3 {
         try ( BufferedWriter br = new BufferedWriter(new FileWriter("c:\\files\\employees.txt"))) {
 
             for (Employee employee : employees) {
-                br.write(employee.getEmployeeId() +" " +employee.getFirstName()+" "+ employee.getSalary());;
+                br.write(employee.getEmployeeId() +" " +employee.getFirstName()+" "+employee.getLastName() +" "+ (employee.getSalary()==null?0:employee.getSalary()));
                 br.newLine();
             }
         } catch (IOException ex) {
-            Logger.getLogger(Example3.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Example3a.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }

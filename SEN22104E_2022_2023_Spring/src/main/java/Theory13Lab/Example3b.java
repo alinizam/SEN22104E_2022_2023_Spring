@@ -6,11 +6,8 @@ package Theory13Lab;
 
 import Theory12.Employee;
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.persistence.EntityManager;
@@ -33,17 +30,17 @@ public class Example3b {
             em.getTransaction().begin();
             while ((line=br.readLine())!=null){
                 String empInfo[]=line.split(" ");
-                Employee e=new Employee();
-                e.setEmployeeId(Integer.parseInt(empInfo[0]));
+                Employee e=em.find(Employee.class,Integer.parseInt(empInfo[0]));
+               
                 e.setFirstName(empInfo[1]);
-                e.setLastName("AK");
-                e.setSalary(Integer.parseInt(empInfo[0]));
+                e.setLastName(empInfo[2]);
+                e.setSalary(Integer.parseInt(empInfo[3]));
                 em.persist(e);
             }
             em.getTransaction().commit();
             
         } catch (IOException ex) {
-            Logger.getLogger(Example3.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Example3a.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
